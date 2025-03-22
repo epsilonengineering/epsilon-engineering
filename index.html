@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Epsilon Engineering</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Epsilon Engineering</h1>
+    </header>
+
+    <nav>
+        <a href="#about">About Us</a>
+        <a href="#services">Services</a>
+        <a href="#portfolio">Portfolio</a>
+        <a href="#blog">Blog</a>
+        <a href="#contact">Contact Us</a>
+    </nav>
+
+    <section class="hero">
+        <h1>Comprehensive Engineering Solutions Across All Disciplines</h1>
+        <a href="#contact" class="cta-button">Request a Consultation</a>
+    </section>
+
+    <section id="about" class="section">
+        <h2>About Us</h2>
+        <p>Epsilon Engineering provides innovative solutions across mechanical, electrical, civil, and industrial automation. Our experienced team delivers precise and efficient engineering services tailored to your business needs.</p>
+    </section>
+
+    <section id="services" class="section">
+        <h2>Our Services</h2>
+        <div class="service-grid">
+            <div class="service-card">
+                <h3>Mechanical Engineering</h3>
+                <p>CAD modeling, FEA analysis, and prototyping.</p>
+            </div>
+            <div class="service-card">
+                <h3>Electrical Engineering</h3>
+                <p>Circuit design, PLC automation, and IoT solutions.</p>
+            </div>
+            <div class="service-card">
+                <h3>Civil Engineering</h3>
+                <p>Structural analysis, site planning, and infrastructure solutions.</p>
+            </div>
+            <div class="service-card">
+                <h3>Industrial Automation</h3>
+                <p>Automated systems design and integration for industrial applications.</p>
+            </div>
+            <div class="service-card">
+                <h3>Software Solutions</h3>
+                <p>IoT system integration, data analytics, and custom software development.</p>
+            </div>
+            <div class="service-card">
+                <h3>Technical Documentation</h3>
+                <p>Comprehensive engineering reports and detailed project documentation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="portfolio" class="section">
+        <h2>Portfolio</h2>
+        <p>Explore our successful projects in mechanical design, industrial automation, and multi-disciplinary engineering solutions.</p>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="attractive_project1.jpg" alt="Innovative Design" loading="lazy">
+                <h3>Innovative Design</h3>
+                <p>Cutting-edge solutions delivering superior performance.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="attractive_project2.jpg" alt="Automation Excellence" loading="lazy">
+                <h3>Automation Excellence</h3>
+                <p>Streamlining processes through advanced automation systems.</p>
+            </div>
+            <div class="portfolio-item">
+                <img src="attractive_project3.jpg" alt="Custom Engineering" loading="lazy">
+                <h3>Custom Engineering</h3>
+                <p>Tailored solutions to meet complex engineering challenges.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="blog" class="section">
+        <h2>Blog</h2>
+        <p>Stay updated with industry insights, technical case studies, and the latest innovations in engineering.</p>
+    </section>
+
+    <section id="contact" class="section">
+        <h2>Contact Us</h2>
+        <form id="contactForm">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required><br><br>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required><br><br>
+
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" rows="4" placeholder="Your message" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+        </form>
+
+        <p id="formFeedback" style="color: green; display: none;">Message sent successfully!</p>
+
+        <script>
+            document.getElementById('contactForm').addEventListener('submit', function (e) {
+                e.preventDefault();
+                const name = document.getElementById('name').value.trim();
+                const email = document.getElementById('email').value.trim();
+                const message = document.getElementById('message').value.trim();
+                const feedback = document.getElementById('formFeedback');
+
+                if (!name || !email || !message) {
+                    alert('Please fill out all fields.');
+                    return;
+                }
+
+                feedback.style.display = 'block';
+                this.reset();
+            });
+        </script>
+    </section>
+
+    <footer>
+        <p>&copy; 2025 Epsilon Engineering. All Rights Reserved.</p>
+    </footer>
+
+</body>
+
+</html>
